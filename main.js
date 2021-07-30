@@ -1,47 +1,50 @@
-canvas=document.getElementById("mycanvas");
-  ctx=canvas.getContext("2d");
-  
-  ctx.beginPath();
-  ctx.strokeStyle="Bule";
-  ctx.lineWidth=2;
-  ctx.arc(200,200,40,0,2*Math.PI);
-  ctx.stroke();
-  
-  
-  ctx.beginPath();
-  ctx.strokeStyle="Black";
-  ctx.lineWidth=2;
-  ctx.arc(200,200,40,0,2*Math.PI);
-  ctx.stroke();
+var names_of_people = [];
+    
+function submit()
+{
+    var GuestName = document.getElementById("name1").value;
+	// use the push function as - names_of_people.push(GuestName);
+	names_of_people.push(Guestname);
+	console.log(GuestName);    
+    console.log(names_of_people);
+    var lenght_of_name = names_of_people.length;
+    console.log(lenght_of_name);
+	document.getElementById("display_name").innerHTML=names_of_people.toString();
+   }
 
-  ctx.beginPath();
-  ctx.strokeStyle="Red";
-  ctx.lineWidth=2;
-  ctx.arc(200,200,40,0,2*Math.PI);
-  ctx.stroke();
 
-  
-  ctx.beginPath();
-  ctx.strokeStyle="Yellow";
-  ctx.lineWidth=2;
-  ctx.arc(200,200,40,0,2*Math.PI);
-  ctx.stroke();
 
-  
-  ctx.beginPath();
-  ctx.strokeStyle="Green";
-  ctx.lineWidth=2;
-  ctx.arc(200,200,40,0,2*Math.PI);
-  ctx.stroke();
-  
-  
-  
-  
-  
-  
-  
-  
-  
+function show()
+{
+	var i= names_of_people.join("<br>");
+	console.log(names_of_people);
+	document.getElementById("p1").innerHTML=i.toString();
+	document.getElementById("sort_button").style.display="block";
+	// display the name in the id= sort_button
+	}
 
- 
-  }
+
+function sorting()
+	{
+		names_of_people.sort();          // add the sort function
+		// .the sort function is .sort();
+		var i= names_of_people.join("<br>");
+		console.log(names_of_people);		
+		document.getElementById("sorted").innerHTML=i.toString();
+		}
+
+
+function searching()
+{
+	var s= document.getElementById("s1").value;
+	var found=0;
+	var j;
+	for(j=0; j<names_of_people.length; j++)
+		{
+			if(s==names_of_people[j]){
+				found=found+1;
+			}	
+		}
+	document.getElementById("p2").innerHTML="name found "+found+" time/s";
+	console.log("found name "+found+" time/s");
+}

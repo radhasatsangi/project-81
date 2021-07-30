@@ -1,19 +1,47 @@
 <html>
+<head>
+	<title>Guest List</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="Tmain.js"></script>
 
-  <head>
-    <link rel="styleing sheets" href="style.css">
-    <title>Project of canvas</title>
-  </head>
-  <body>
-    <h1>Olympic Symbol</h1>
-    <br>
-    <br>
-    <canvas id="my_canvas" width="800" hight="600">
-    </body>
-    </html>
-    <script href="main.js"></script>
+</head>
+<body>
+<center>
+<h3 style="margin-top: 20px; margin-bottom: 20px; ">
+	Guest List
+</h3>
+
+<div id="rows">
+
+<input type="text" placeholder="Enter name" id="name1">
+<button onclick="submit()" id="submit_button">Submit</button>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	
+<hr>
+
+<div id="display_name">
+</div>
+<hr>
+	<div id="Show1"><h3 id="hd1">Guest List</h3>
+		<button onclick="show()" id="show">Show</button>
+		<p id="p1"></p></div>
+	
+<hr>
+<button onclick="sorting()" id="sort_button">
+	Sorted List
+</button>
+
+
+	<div id="sorted"></div>
+    </div>
+	<hr>
+	<input type="text" placeholder="Search name" id="s1">&nbsp;
+    <!--add the below code for button here-->
+	<button onclick="searching()" id="srch">Search</button>
+	<!--<button onclick="searching()" id="srch">Search</button>-->
+	<p id="p2"></p>
     
-    
-  
-  
-    
+</center>
+		
+</body>
+</html>
